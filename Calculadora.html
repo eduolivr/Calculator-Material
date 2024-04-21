@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <!-- Material Design Lite CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-design-lite@1.3.0/material.min.css">
+  <!-- Material Design Lite JavaScript -->
+  <script defer src="https://cdn.jsdelivr.net/npm/material-design-lite@1.3.0/material.min.js"></script>
+  <!-- Calculator CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Calculator</span>
+      <button id="mode-toggle" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">brightness_4</i>
+      </button>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+        <div class="mdl-card mdl-shadow--2dp calculator-card">
+          <div class="mdl-card__supporting-text">
+            <input id="result" class="mdl-textfield__input" type="text" disabled>
+          </div>
+          <div class="mdl-card__actions">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="clearResult()">C</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="calculate()">=</button>
+          </div>
+          <div class="mdl-card__actions">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('7')">7</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('8')">8</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('9')">9</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('+')">+</button>
+          </div>
+          <div class="mdl-card__actions">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('4')">4</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('5')">5</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('6')">6</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('-')">-</button>
+          </div>
+          <div class="mdl-card__actions">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('1')">1</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('2')">2</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('3')">3</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('*')">*</button>
+          </div>
+          <div class="mdl-card__actions">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('0')">0</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('.')">.</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="clearLast()">CE</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('/')">/</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
