@@ -10,6 +10,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/material-design-lite@1.3.0/material.min.js"></script>
   <!-- Calculator CSS -->
   <link rel="stylesheet" href="styles.css">
+  <source src="https://www.myinstants.com/pt/instant/buzina-dilera-35795/?utm_source=copy&utm_medium=share" type="audio/mpeg">
 </head>
 <body>
 
@@ -18,7 +19,7 @@
     <div class="mdl-layout__header-row">
       <span class="mdl-layout-title">Calculator</span>
       <button id="mode-toggle" class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">brightness_4</i>
+        <i class="material-icons">brightness_3</i>
       </button>
     </div>
   </header>
@@ -31,7 +32,8 @@
           </div>
           <div class="mdl-card__actions">
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="clearResult()">C</button>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="calculate()">=</button>
+<!--Adicionado a função de tocar o som ao apertar '='-->
+              <a href="./Aviso/buzinaprolongada.mp3">    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="calculate()">=</button> </a>
           </div>
           <div class="mdl-card__actions">
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="appendToResult('7')">7</button>

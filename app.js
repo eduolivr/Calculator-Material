@@ -33,3 +33,4 @@ function toggleMode() {
     document.getElementById('mode-toggle').innerHTML = '<i class="material-icons">brightness_7</i>';
   }
 }
+
